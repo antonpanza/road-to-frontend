@@ -1,0 +1,19 @@
+.button {
+  font-family: 'Virgil', sans-serif;
+  background-color: #fff;
+  font-size: 1.5rem;
+  color: black;
+  border: 3px solid black;
+  padding: 10px 45px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: lightgray;
+    border: 3px solid gray;
+  }
+  &:focus {
+    border: 3px solid gray;
+  }
+}
