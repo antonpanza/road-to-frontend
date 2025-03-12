@@ -1,0 +1,22 @@
+@font-face {
+  font-family: 'Virgil'; /* Имя шрифта */
+  src: url('@/assets/fonts/Virgil.woff2') format('woff2'); /* Путь к файлу */
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Virgil', sans-serif;
+  background-color: white;
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  color: black;
+}
+
+h1 {
+  font-size: 4rem;
+}
