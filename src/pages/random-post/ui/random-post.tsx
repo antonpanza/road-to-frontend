@@ -1,20 +1,19 @@
-import { useState } from "react";
-import { postsApi } from "@/shared/api/posts-api";
-import styles from '@/styles/common.module.scss';
-import { Button } from "@/shared/ui/button/Button";
-
+import { useState } from 'react'
+import { postsApi } from './../../../shared/api/posts-api'
+import styles from './../../../../src/styles/common.module.scss'
+import { Button } from './../../../shared/ui/button/Button'
 
 export function RandomPost() {
-  const [postTitle, setPostTitle] = useState<string | null>(null);
+  const [postTitle, setPostTitle] = useState<string | null>(null)
 
   const fetchRandomPost = async () => {
     try {
-      const post = await postsApi.getRandomPost();
-      setPostTitle(post.title);
+      const post = await postsApi.getRandomPost()
+      setPostTitle(post.title)
     } catch (error) {
-      console.error("Ошибка загрузки поста:", error);
+      console.error('Ошибка загрузки поста:', error)
     }
-  };
+  }
 
   return (
     <div className={styles.container}>
@@ -22,5 +21,5 @@ export function RandomPost() {
       <Button label="Получить" onClick={fetchRandomPost} />
       {postTitle && <h2>{postTitle}</h2>}
     </div>
-  );
+  )
 }

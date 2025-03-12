@@ -1,8 +1,8 @@
-import React from "react";
-import styles from "./button.module.scss";
+import React from 'react'
+import styles from './button.module.scss'
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  label: string;
+  label: string
 }
 
 export const Button: React.FC<ButtonProps> = ({ label, ...props }) => {
@@ -10,5 +10,5 @@ export const Button: React.FC<ButtonProps> = ({ label, ...props }) => {
     <button className={styles.button} {...props}>
       {label}
     </button>
-  );
-};
+  )
+}
